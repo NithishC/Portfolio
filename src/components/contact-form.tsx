@@ -65,26 +65,40 @@ export function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (validateForm()) {
       setIsSubmitting(true);
-      
-      // Simulate API call
-      setTimeout(() => {
-        setIsSubmitting(false);
-        setIsSubmitted(true);
-        setFormState({
-          name: "",
-          email: "",
-          subject: "",
-          message: ""
+
+      // Send data to the server for email sending
+      fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formState), // Send form data as JSON
+      })
+        .then((response) => {
+          if (response.ok) {
+            // If request is successful, set success state
+            setIsSubmitted(true);
+          } else {
+            // Handle error (e.g., show an error message)
+            console.error("Failed to send email");
+          }
+        })
+        .catch((error) => {
+          console.error("Error sending email:", error);
+        })
+        .finally(() => {
+          // set submitting state to false
+          setIsSubmitting(false);
+          // Reset the form fields
+          setFormState({ name: "", email: "", subject: "", message: "" });
+          // Reset success message after 5 seconds
+          setTimeout(() => {
+            setIsSubmitted(false);
+          }, 5000);
         });
-        
-        // Reset success message after 5 seconds
-        setTimeout(() => {
-          setIsSubmitted(false);
-        }, 5000);
-      }, 1500);
     }
   };
 
@@ -103,16 +117,18 @@ export function ContactForm() {
           >
             <motion.div 
               className="text-success text-6xl mb-4 relative"
-              animate={{ 
-                scale: [1, 1.2, 1],
-                rotate: [0, 10, 0, -10, 0]
+              animate={{
+                scale: [1, 1.2, 1], // Add a slight scaling animation
+                rotate: [0, 10, 0, -10, 0], // Add a slight rotation animation
               }}
               transition={{ duration: 0.5 }}
             >
+              {/* Render a checkmark icon */}
               <Icon icon="lucide:check-circle" />
               <motion.div 
                 className="absolute inset-0 bg-success/20 rounded-full blur-xl -z-10"
-                animate={{ scale: [0.8, 1.2, 0.8] }}
+                animate={{ scale: [0.8, 1.2, 0.8] }} // Add a scaling pulse animation
+                // Add a smooth transition with infinite loop
                 transition={{ duration: 2, repeat: Infinity }}
               ></motion.div>
             </motion.div>

@@ -75,28 +75,27 @@ export const heroData = {
       {
         icon: "lucide:mail",
         title: "Email",
-        value: "john.doe@example.com",
-        link: "mailto:john.doe@example.com"
+        value: "nithishchandrasekaran01@gmail.com",
+        link: "mailto:nithishchandrasekaran01@gmail.com"
       },
       {
         icon: "lucide:phone",
         title: "Phone",
-        value: "+1 (555) 123-4567",
-        link: "tel:+15551234567"
+        value: "+1 (857) 398-1391",
+        link: "tel:+18573981391"
       },
       {
         icon: "lucide:map-pin",
         title: "Location",
-        value: "San Francisco, CA",
-        link: "https://maps.google.com/?q=San+Francisco,+CA"
+        value: "Boston, MA",
+        link: "https://maps.google.com/?q=Boston,+MA"
       }
     ],
     socialTitle: "Connect With Me",
     socialLinks: [
-      { icon: "lucide:github", link: "https://github.com", color: "#333" },
-      { icon: "lucide:linkedin", link: "https://linkedin.com", color: "#0077B5" },
-      { icon: "lucide:twitter", link: "https://twitter.com", color: "#1DA1F2" },
-      { icon: "lucide:instagram", link: "https://instagram.com", color: "#E4405F" }
+      { icon: "lucide:github", link: "https://github.com/NithishC", color: "#333" },
+      { icon: "lucide:linkedin", link: "https://linkedin.com/in/nithishchan", color: "#0077B5" },
+      { icon: "lucide:instagram", link: "https://instagram.com/_nit_hish_", color: "#E4405F" }
     ],
     formLabels: {
       name: "Name",
