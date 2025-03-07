@@ -62,8 +62,8 @@ export function AboutSection() {
                 </div>
                 <h3 className="text-2xl font-semibold mb-2">{heroData.name}</h3>
                 <div className="flex flex-wrap gap-2 justify-center mb-4">
-                  <Badge color="primary" variant="flat">Fullstack Developer</Badge>
-                  <Badge color="secondary" variant="flat">AI Engineer</Badge>
+                  <Badge color="primary" variant="flat">Fullstack Developer |</Badge>
+                  <Badge color="secondary" variant="flat">AI/ML Engineer |</Badge>
                   <Badge color="success" variant="flat">Data Scientist</Badge>
                 </div>
                 {aboutData.bio.map((paragraph, index) => (
