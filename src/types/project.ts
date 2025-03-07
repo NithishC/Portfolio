@@ -2,8 +2,8 @@ export interface Project {
   id: number;
   title: string;
   description: string;
-  image: string;
   tags: string[];
   link: string;
   featured?: boolean;
+  paper?: boolean;
 }

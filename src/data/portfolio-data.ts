@@ -41,7 +41,7 @@ export const heroData = {
         link: "#contact"
       }
     },
-    avatar: "https://i.pravatar.cc/300?img=11"
+    avatar: "/DSC_0353.JPG"
   };
   
   // Projects Section
