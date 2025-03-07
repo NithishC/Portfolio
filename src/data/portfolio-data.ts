@@ -28,7 +28,17 @@ export const heroData = {
       {
         name: "Python for Data Science",
         issuer: "NPTEL",
-        link: "#credential-link"
+        link: "https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL19CS59S41231487191201040"
+      },
+      {
+        name: "Flutter - Advanced",
+        issuer: "UDEMY",
+        link: "https://www.udemy.com/certificate/UC-6bde0464-ce29-4bd2-9dd2-a1eca783e150/"
+      },
+      {
+        name: "Convolutional Neural Networks in TensorFlow",
+        issuer: "Coursera - Deeplearning.ai",
+        link: "https://www.coursera.org/account/accomplishments/verify/3BXG7AXHJ599"
       }
     ],
     buttons: {

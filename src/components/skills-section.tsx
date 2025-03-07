@@ -116,12 +116,6 @@ export function SkillsSection() {
           ))}
         </motion.div>
       </div>
-
-      <div className="absolute top-10 right-0 hidden lg:block">
-        <div className="text-primary/5 text-[200px] font-bold select-none">
-          <Icon icon="lucide:code-2" />
-        </div>
-      </div>
     </section>
   );
 }

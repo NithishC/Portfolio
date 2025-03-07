@@ -62,12 +62,6 @@ export function ProjectsSection() {
           </motion.div>
         )}
       </div>
-
-      <div className="absolute bottom-10 left-0 hidden lg:block">
-        <div className="text-primary/5 text-[200px] font-bold select-none">
-          <Icon icon="lucide:code" />
-        </div>
-      </div>
     </section>
   );
 }

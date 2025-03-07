@@ -43,7 +43,7 @@ export function HeroSection() {
         ></motion.div>
       </div>
       
-      <div className="container mx-auto px-4 z-20">
+      <div className="relative container mx-auto px-4 z-20">
         <div className="flex flex-col items-center text-center lg:text-left lg:items-start">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

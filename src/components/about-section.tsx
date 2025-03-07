@@ -88,28 +88,6 @@ export function AboutSection() {
                   </div>
                 </div>
                 
-                <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                  <Button
-                    color="primary"
-                    variant="shadow"
-                    endContent={<Icon icon="lucide:download" />}
-                    className="relative overflow-hidden group"
-                    onPress={() =>
-                      window.location.href = aboutData.buttons.cv.link
-                    }
-                  >
-                    <span className="relative z-10">{aboutData.buttons.cv.text}</span>
-                    <span className="absolute inset-0 bg-white/20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
-                  </Button>
-                  <Button
-                    as="a"
-                    onPress={() => window.location.href = aboutData.buttons.contact.link}
-                    variant="bordered"
-                    className="group"
-                  >
-                    <span className="group-hover:text-primary transition-colors">{aboutData.buttons.contact.text}</span>
-                  </Button>
-                </div>
               </CardBody>
             </Card>
           </motion.div>
@@ -145,13 +123,29 @@ export function AboutSection() {
                 </Card>
               </motion.div>
             ))}
+            <div className="flex flex-wrap gap-4 justify-center p-10">
+              <Button
+                color="primary"
+                variant="shadow"
+                endContent={<Icon icon="lucide:download" />}
+                className="relative overflow-hidden group"
+                onPress={() =>
+                  window.location.href = aboutData.buttons.cv.link
+                }
+              >
+                <span className="relative z-10">{aboutData.buttons.cv.text}</span>
+                <span className="absolute inset-0 bg-white/20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+              </Button>
+              <Button
+                as="a"
+                onPress={() => window.location.href = aboutData.buttons.contact.link}
+                variant="bordered"
+                className="group"
+              >
+                <span className="group-hover:text-primary transition-colors">{aboutData.buttons.contact.text}</span>
+              </Button>
+            </div>
           </motion.div>
-        </div>
-      </div>
-
-      <div className="absolute top-1/4 right-0 hidden lg:block">
-        <div className="text-primary/5 text-[200px] font-bold select-none">
-          <Icon icon="lucide:user" />
         </div>
       </div>
     </section>

@@ -18,9 +18,10 @@ export function NavigationBar() {
   }, []);
 
   return (
+    <div className="sticky top-0 z-50">
     <Navbar
       maxWidth="xl"
-      className={`fixed top-0 z-50 transition-all duration-500 ${
+            className={`transition-all duration-500 ${
         isScrolled 
           ? "bg-background/70 backdrop-blur-xl shadow-md" 
           : "bg-transparent"
@@ -69,5 +70,6 @@ export function NavigationBar() {
         </NavbarItem>
       </NavbarContent>
     </Navbar>
+    </div>
   );
 }
