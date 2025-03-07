@@ -1,5 +1,6 @@
 import React from "react";
 import Particles from "react-tsparticles";
+import { ISourceOptions } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
 import { useTheme } from "@heroui/use-theme";
 
@@ -9,7 +10,7 @@ export function ParticleBackground() {
     await loadFull(engine);
   }, []);
 
-  const lightModeOptions = {
+  const lightModeOptions: ISourceOptions = {
     fullScreen: { enable: false },
     background: {
       color: {
@@ -104,7 +105,7 @@ export function ParticleBackground() {
     detectRetina: true,
   };
 
-  const darkModeOptions = {
+  const darkModeOptions: ISourceOptions = {
     fullScreen: { enable: false },
     background: {
       color: {

@@ -10,23 +10,34 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
     "@heroui/react": "2.7.4",
     "@heroui/use-theme": "2.1.6",
     "@iconify/react": "latest",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
     "framer-motion": "^11.18.2",
+    "googleapis": "^105.0.0",
+    "nodemailer": "^6.10.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-tsparticles": "^2.12.2",
     "tsparticles": "^2.12.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.9",
+    "@types/nodemailer": "^6.4.17",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "10.4.20",
-    "tailwindcss": "3.4.17",
     "postcss": "8.4.49",
-    "typescript": "5.7.3",
+    "tailwindcss": "3.4.17",
+    "typescript": "^5.7.3",
     "vite": "^6.0.11"
   }
 }

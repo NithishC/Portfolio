@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { SkillCard } from "./skill-card";
 import { skills, skillCategories } from "../data/skills";
-import { Icon } from "@iconify/react";
 import { Tabs, Tab } from "@heroui/react";
 import { skillsData } from "../data/portfolio-data";
 
