@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import serverless from "serverless-http";
 import { join } from "path";
 import { config } from "dotenv";
 import { google } from "googleapis";
@@ -100,7 +101,4 @@ app.get("*", (req, res) => {
   res.sendFile(join(process.cwd(), "dist", "index.html"));
 });
 
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+export const handler = serverless(app);
