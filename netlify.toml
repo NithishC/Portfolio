@@ -1,0 +1,12 @@
+[build]
+  command = "npm install && npm run build"
+  publish = "dist"
+
+[functions]
+  external_node_modules = ["express", "cors", "serverless-http", "nodemailer", "googleapis"]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/server"
+  status = 200
