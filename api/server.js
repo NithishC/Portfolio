@@ -18,10 +18,6 @@ app.use(express.json());
 // Serve React frontend
 app.use(express.static(join(process.cwd(), "dist"))); // Use process.cwd() for ESM compatibility
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(process.cwd(), 'dist', 'index.html'));
-});
-
 // Set up OAuth2 credentials and Gmail API
 const OAuth2 = google.auth.OAuth2;
 
@@ -101,7 +97,7 @@ app.post("/api/send-email", async (req, res) => {
 
 // Catch-all route to serve React app
 app.get("*", (req, res) => {
-  res.sendFile(join(process.cwd(), "client", "dist", "index.html"));
+  res.sendFile(join(process.cwd(), "dist", "index.html"));
 });
 
 // Start the server
