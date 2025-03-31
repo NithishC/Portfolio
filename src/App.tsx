@@ -5,6 +5,7 @@ import { ProjectsSection } from "./components/projects-section";
 import { SkillsSection } from "./components/skills-section";
 import { ContactSection } from "./components/contact-section";
 import { Footer } from "./components/footer";
+import { Testimonial } from "./components/testimonial-section";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <NavigationBar />
       <HeroSection />
       <AboutSection />
+      <Testimonial />
       <ProjectsSection />
       <SkillsSection />
       <ContactSection />
